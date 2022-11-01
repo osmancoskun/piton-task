@@ -4,6 +4,11 @@ interface Props {
   type: string;
   placeholder?: string;
   label: string;
+  pattern?: string;
+  required?: boolean;
+  title?: string;
+  minLength?: number;
+  maxLength?: number;
   onChange?: (event: any) => void;
 }
 const Input: NextPage<Props> = (props) => {
@@ -21,6 +26,11 @@ const Input: NextPage<Props> = (props) => {
           type={props.type}
           placeholder={props.placeholder}
           onChange={props.onChange}
+          pattern={props.pattern}
+          required={props.required}
+          title={props.title}
+          minLength={props.minLength}
+          maxLength={props.maxLength}
         />
       </div>
     </div>
