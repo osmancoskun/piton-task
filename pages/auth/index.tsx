@@ -44,7 +44,6 @@ export default function Auth() {
       })
         .then((response) => response.json())
         .then((result) => {
-          console.log(result.token);
           Router.push({
             pathname: "/auth",
             query: {
@@ -63,7 +62,6 @@ export default function Auth() {
         email: loginData.email,
         password: loginData.password,
       };
-      let res = {};
       await fetch(baseURL + loginEP, {
         method: "POST",
         headers: {
@@ -72,11 +70,7 @@ export default function Auth() {
         body: JSON.stringify(body),
       })
         .then((response) => response.json())
-        .then((result) => {
-          res = result;
-        })
         .catch((error) => console.log("error", error));
-      console.log("result", res);
     } catch (error) {
       console.log(error);
     }
@@ -140,7 +134,6 @@ export default function Auth() {
               <div className="md:w-1/3"></div>
               <div className="md:w-2/3">
                 <button
-                  type="button"
                   onClick={login}
                   className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                 >
