@@ -1,9 +1,12 @@
 const Navbar = () => {
   return (
-    <nav className="bg-black p-6 mb-5 border">
-      <div className="flex items-center flex-grow flex-shrink-0 text-white mr-6">
+    <nav className="bg-blue-500 p-5 mb-5 w-screen border flex justify-between items-center">
+      <a
+        href="/product2"
+        className="flex items-center flex-shrink-0  mr-6 cursor-pointer"
+      >
         <svg
-          className="fill-current h-8 w-8 mr-2"
+          className="bg-cyan-100 h-8 w-8 mr-2"
           width="54"
           height="54"
           viewBox="0 0 54 54"
@@ -14,7 +17,10 @@ const Navbar = () => {
         <span className="font-semibold text-xl tracking-tight">
           Techno Products
         </span>
-      </div>
+      </a>
+      <a href="#" className="mr-6">
+        <span className="font-semibold text-xl tracking-tight ">Contact</span>
+      </a>
     </nav>
   );
 };

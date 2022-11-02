@@ -30,25 +30,27 @@ function Products() {
   }, []);
 
   return (
-    <div className="h-screen w-screen">
+    <>
       <Navbar></Navbar>
 
-      <div className="flex flex-wrap gap-5 p-5 border w-screen h-screen">
-        {products.map((product: ProductProps) => {
-          return (
-            <BookCard3
-              key={product.id}
-              id={product.id}
-              name={product.title}
-              image={product.thumbnail}
-              price={product.price}
-              description={product.description}
-              likes={product.stock}
-            />
-          );
-        })}
+      <div className="h-screen w-screen">
+        <div className="flex flex-wrap gap-5 p-5 border w-screen h-screen">
+          {products.map((product: ProductProps) => {
+            return (
+              <BookCard3
+                key={product.id}
+                id={product.id}
+                name={product.title}
+                image={product.thumbnail}
+                price={product.price}
+                description={product.description}
+                likes={product.stock}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default Products;
