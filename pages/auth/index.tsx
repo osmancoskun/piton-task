@@ -23,7 +23,7 @@ export default function Auth() {
     passwordAgain: "",
     buttonDisabled: true,
   });
-  const register = async (e) => {
+  const register = async (e: any) => {
     try {
       e.preventDefault();
       if (registerData.password != registerData.passwordAgain) {

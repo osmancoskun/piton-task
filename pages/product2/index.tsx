@@ -37,6 +37,7 @@ function Products() {
         {products.map((product: ProductProps) => {
           return (
             <BookCard3
+              key={product.id}
               id={product.id}
               name={product.title}
               image={product.thumbnail}
